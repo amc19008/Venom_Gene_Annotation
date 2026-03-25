@@ -3,6 +3,7 @@ This workflow for venom gene annotation uses venome gland transcriptomes, a veno
 
 ## Before begining ensure you have conda and blast installed:
 conda create -n blast -c bioconda -c conda-forge blast
+
 To ensure it worked:
 blastn -version
 
