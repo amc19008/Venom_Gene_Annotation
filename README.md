@@ -6,9 +6,11 @@ This workflow for venom gene annotation uses venome gland transcriptomes, a veno
   conda create -n blast -c bioconda -c conda-forge blast
 
 To ensure it worked:
+
   blastn -version
 
 ## Step 1. Indexing
+
   wget https://raw.githubusercontent.com/pedronachtigall/ToxCodAn-Genome/main/Databases/Scorpiones_db.fasta
 
   conda activate blast 
