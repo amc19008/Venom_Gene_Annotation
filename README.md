@@ -16,5 +16,5 @@ To ensure it worked:
     conda activate blast 
 
     makeblastdb -in Scorpiones_db.fasta -parse_seqids -input_type fasta -dbtype nucl -out Scorpiones_db
-#### This should make 10 db files ending in .nog, .nin, etc... 
+This should make 10 db files ending in .nog, .nin, etc... 
 
