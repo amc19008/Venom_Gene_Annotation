@@ -18,3 +18,5 @@ To ensure it worked:
     makeblastdb -in Scorpiones_db.fasta -parse_seqids -input_type fasta -dbtype nucl -out Scorpiones_db
 This should make 10 db files ending in .nog, .nin, etc... 
 
+## Step 2. Import off NCBI, git, or move .fasta files from a specialized direcory right into working directory
+
