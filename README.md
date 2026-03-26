@@ -45,3 +45,6 @@ For example:
 
         bash BLASTI_tblastn_Scorpiones_db.sh T_serru_aa_dl.fasta
 
+The file that results will be renamed according to the file sample name and type of Blast run:
+
+        T_serru_aa_dl.fasta.tblastn.Scorpiones_db.out
