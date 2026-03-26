@@ -19,4 +19,7 @@ To ensure it worked:
 This should make 10 db files ending in .nog, .nin, etc... 
 
 ## Step 2. Import off NCBI, git, or move .fasta files from a specialized direcory right into working directory
+You can import your own assembled transcriptomes to the working directory, or browse for transcriptomes here: 
+
+        https://www.ncbi.nlm.nih.gov/Traces/wgs/?page=1&view=tsa 
 
