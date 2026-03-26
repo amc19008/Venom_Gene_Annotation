@@ -21,15 +21,15 @@ This should make 10 db files ending in .nog, .nin, etc...
 ## Step 2. Import off NCBI, git, or move .fasta files from a specialized direcory right into working directory
 You can import your own assembled transcriptomes to the working directory, or browse for transcriptomes here: 
 
-        https://www.ncbi.nlm.nih.gov/Traces/wgs/?page=1&view=tsa 
+    https://www.ncbi.nlm.nih.gov/Traces/wgs/?page=1&view=tsa 
 
 For this example we will use a combination of the two types (diy and ncbi) for two scorpion species (Chaerilus stockmannorum and Tityus serrulatus), in both nucleotide and amino acid formats. (You can also import all of these from the '/fastas' folder on this git to follow along)
 
 NCBI downloads renamed:
 
-        mv GKVP01.1.fsa_nt C_stock_nt_dl.fasta
-        mv GEUW01.1.fsa_aa T_serru_aa_dl.fasta
-        mv GEUW01.1.fsa_nt T_serru_nt_dl.fasta 
+    mv GKVP01.1.fsa_nt C_stock_nt_dl.fasta
+    mv GEUW01.1.fsa_aa T_serru_aa_dl.fasta
+    mv GEUW01.1.fsa_nt T_serru_nt_dl.fasta 
 Total telson fasta files in the working dir now:
 
         C_stock_nt_dl.fasta
@@ -43,8 +43,11 @@ Total telson fasta files in the working dir now:
 ###Use the correct script, according to fasta type. For amino acid ones, use BLASTI_tblastn_Scorpiones_db.sh
 For example: 
 
-        bash BLASTI_tblastn_Scorpiones_db.sh T_serru_aa_dl.fasta
+    bash BLASTI_tblastn_Scorpiones_db.sh T_serru_aa_dl.fasta
 
 The file that results will be renamed according to the file sample name and type of Blast run:
 
-        T_serru_aa_dl.fasta.tblastn.Scorpiones_db.out
+    T_serru_aa_dl.fasta.tblastn.Scorpiones_db.out
+This file will have 13 columns that correspond with the following:
+
+    qseqid sseqid pident length evalue mismatch gapopen qstart qend sstart send qlen slen
