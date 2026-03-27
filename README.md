@@ -58,6 +58,36 @@ This file will have 13 columns that correspond with the following:
     qseqid sseqid pident length evalue mismatch gapopen qstart qend sstart send qlen slen
 
 ## Step 3b. BLASTing several fasta samples:
+### If any fasta files are gzipped, unzip them first:
+
+    gunzip C_stock_nt_dl.fasta.gz
+Then, you can download the BLASTI_tblastn_array script. Remember: Edit according to what data types you want to run 
+
+    wget 
+Next we can try this using nucleotide fastas in a new directory, copying over relevant files:
+
+    mkdir nt_multi
+*
+
+        mv C_stock_nt_dl.fasta nt_multi
+        mv T_serru_nt_dl.fasta nt_multi
+*
+
+        cp BLASTI_tblastn_array.sh nt_multi
+*
+
+        cd nt_multi
+Edit the lines in the BLASTItblastn_array script leading to the directory your fastas and databases are in:
+
+    ...
+    # Directory containing the FASTA files
+    FASTA_DIR="/path/to/nt_or_aa/FASTAs"
+    ...
+    # Run BLAST
+    tblastn -db /path/to/Scorpiones_db -evalue 1e-20 \
+And finally, BLAST:
+
+    bash BLASTI_tblastn_array.sh
 
 ## Step 4. Python script to retrieve the sequences for one
 ### You will need to first download the getSeq.py script from this git: 
@@ -92,8 +122,10 @@ You can check it installed properly by checking for the version:
         python -c "import Bio; print(Bio.__version__)"
 To run the script, ensure that the proper paths to your Column1 and fasta file are substituted in the BLASTII_py_for_one.sh:
 
+    ...
     file="/path/to/Column2file/${line}_Column1.txt" #This is now the list of files
     Fasta="/path/to/fastafile/T_serru_aa_dl.fasta"
+    ...
 And simply bash:
 
     bash BLASTII_py_for_one.sh
