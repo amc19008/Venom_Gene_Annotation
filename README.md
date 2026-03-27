@@ -3,6 +3,8 @@ This workflow for venom gene annotation uses venome gland (in this case telson) 
 
 # Tutorial using scorpions and ToxCodAn DB
 ## Before begining ensure you have conda and blast installed:
+To download it, if you don'tt have it:
+
     conda create -n blast -c bioconda -c conda-forge blast
 
 To ensure it worked:
