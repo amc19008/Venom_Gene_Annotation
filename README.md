@@ -12,12 +12,14 @@ To ensure it worked:
     blastn -version
 
 ## Step 1. Indexing
+Download the Scorpiones_db
 
     wget https://raw.githubusercontent.com/pedronachtigall/ToxCodAn-Genome/main/Databases/Scorpiones_db.fasta
 *
+Activate BLAST environment
 
         conda activate blast 
-*
+Make the databases
 
         makeblastdb -in Scorpiones_db.fasta -parse_seqids -input_type fasta -dbtype nucl -out Scorpiones_db
 This should make 10 db files ending in .nog, .nin, etc... 
