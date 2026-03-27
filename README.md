@@ -61,7 +61,6 @@ This file will have 13 columns that correspond with the following:
 
     C_stock_nt_dl
     C_stock_telson_ORP_centroids
-    Scorpiones_db
     T_serru_aa_dl
     T_serru_nt_dl
     Tserrulatus_withid_withid_centroids
