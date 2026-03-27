@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#For use with a single fasta file containing nucleotide data
+
 SEQ=$1
 
 tblastx -db Scorpiones_db -evalue 1e-20 \
