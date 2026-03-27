@@ -2,8 +2,8 @@
 
 while read line
         do
-        file="/core/globus/cgi/RAMP/gene_fam/BLAST/${line}-blastx.Scorpiones_db_Column1.txt" #This is now the list of files
-        Fasta="/core/globus/cgi/RAMP/gene_fam/BLAST/${line}.fasta"
+        file="/path/to/Column1file/${line}_Column1.txt" #This is now the list of files
+        Fasta="/path/to/fastafile/${line}.fasta"
 #Step 2: Make a list of battle types to be analyzed
 #Reads the input file one line at a time
 #pulls colony type (e.g., AB), by cutting (cut) at commas (-d ,) and keeping the first field (-f1)
