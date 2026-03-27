@@ -71,9 +71,9 @@ You also need to create a list.txt file that contains the names of the samples y
 
 Next you need a Column2.txt file that contains the contents of column 2 from your out file:
 
-    awk '{print $2}' T_serru_aa_dl.fasta.tblastn.Scorpiones_db.out > Column2.txt
+    awk '{print $2}' T_serru_aa_dl.fasta.tblastn.Scorpiones_db.out > T_serru_aa_dl_Column2.txt
 
-The resulting file contents will contain the sseqids which look like this:
+Ensure you rename with the same naming format as the sample files. The resulting file contents will contain the sseqids which look like this:
 
     Scorpiones_Toxin_141_NDBS
     Scorpiones_Toxin_142_NDBS
