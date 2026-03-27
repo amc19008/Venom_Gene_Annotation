@@ -95,3 +95,14 @@ To run the script, ensure that the proper paths to your Column1 and fasta file a
 And simply bash:
 
     bash BLASTII_py_for_one.sh
+The output file will be called Toxin_output.fasta and look like this:
+
+    >JAW06970.1 putative potassium channel toxin [Tityus serrulatus]
+    MHSSVFILILFSLAVINPIFFDMKVEAGCMKEYCAGQCRGKVSQDYCLKHCKCIPRFI
+    >JAW06971.1 putative sodium channel toxin [Tityus serrulatus]
+    MNYFILLVVVCLLTAGTEGKKDGYPVEYDNCAYICWNYDNAYCDKLCKDKKADSGYCYWV
+    HILCYCYGLPDSEPTKTNGKCKSGKK
+    >JAW06972.1 putative metalloproteinase, partial [Tityus serrulatus]
+    IPGHEKYVHYSKLTRNLGDYYCKKNEGLAKDADIIMLTTDRSLADISREGKLIADVAGGA
+    ....
+
