@@ -61,7 +61,7 @@ This file will have 13 columns that correspond with the following:
 ### If any fasta files are gzipped, unzip them first:
 
     gunzip C_stock_nt_dl.fasta.gz
-Then, you can download the BLASTI_tblastn_array script. Remember: Edit according to what data types you want to run 
+Then, you can download the BLASTI_tblastx_multi script. Remember: Edit according to what data types you want to run 
 
     wget 
 Next we can try this using nucleotide fastas in a new directory, copying over relevant files:
@@ -77,17 +77,17 @@ Next we can try this using nucleotide fastas in a new directory, copying over re
 *
 
         cd nt_multi
-Edit the lines in the BLASTItblastx_array script leading to the directory your fastas and databases are in:
+Edit the lines in the BLASTI_tblastx_multi script leading to the directory your fastas and databases are in:
 
     ...
     # Directory containing the FASTA files
-    FASTA_DIR="/path/to/nt_or_aa/FASTAs"
+    FASTA_DIR="/path/to/nt_multi"
     ...
     # Run BLAST
     tblastn -db /path/to/Scorpiones_db -evalue 1e-20 \
 And finally, BLAST:
 
-    bash BLASTI_tblastx_array.sh
+    bash BLASTI_tblastx_multi.sh
 This will result in 2 output files in this case, ending with "-tblastn.Scorpiones_db.out":
 
     C_stock_nt_dl-tblastn.Scorpiones_db.out
