@@ -148,7 +148,7 @@ The output file will be called Toxin_output.fasta and look like this:
 ### Working again with the data and directory (nt_multi) from 3b, we can apply similar steps as if we were running one fasta. 
 First, download the BLASTII_py_for_all.sh 
 
-    wget 
+    wget https://raw.githubusercontent.com/amc19008/Venom_Gene_Annotation/refs/heads/main/Scripts/BLASTII_py_for_all.sh
 Ensure the getSeq.py file is also present in this directory:
 
     cp ../getSeq.py .
