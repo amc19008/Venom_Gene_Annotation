@@ -91,7 +91,7 @@ You can check it installed properly by checking for the version:
 To run the script, ensure that the proper paths to your Column1 and fasta file are substituted in the BLASTII_py_for_one.sh:
 
     file="/path/to/Column2file/${line}_Column1.txt" #This is now the list of files
-    Fasta="/path/to/fastafile/.fasta"
+    Fasta="/path/to/fastafile/T_serru_aa_dl.fasta"
 And simply bash:
 
     bash BLASTII_py_for_one.sh
