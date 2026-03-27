@@ -28,7 +28,7 @@ You can import your own assembled transcriptomes to the working directory, or br
 For this example we will use a combination of the two types (diy and ncbi) for two scorpion species (Chaerilus stockmannorum and Tityus serrulatus), in both nucleotide and amino acid formats. 
         (You can also import all of these from the '/fastas' folder on this git to follow along using wget and the raw URL:
         
-                wget https://raw.githubusercontent.com/amc19008/Venom_Gene_Annotation/refs/heads/main/Fastas/C_stock_telson_ORP_centroids.fasta])
+                wget https://raw.githubusercontent.com/amc19008/Venom_Gene_Annotation/refs/heads/main/Fastas/T_serru_aa_dl.fasta])
 
 NCBI downloads renamed:
 
@@ -57,10 +57,12 @@ This file will have 13 columns that correspond with the following:
 
     qseqid sseqid pident length evalue mismatch gapopen qstart qend sstart send qlen slen
 
-## Step 4. Python script to retrieve the sequences
+## Step 4. Python script to retrieve the sequences for one
 ### You will need to first download the getSeq.py script from this git. 
 
     wget https://raw.githubusercontent.com/amc19008/Venom_Gene_Annotation/refs/heads/main/Scripts/getSeq.py 
+
+Next, you will identify the qseqid and sseqid 
 
 ### You also need to create a list.txt file that contains the names of the samples you intend to use:
 
