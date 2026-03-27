@@ -45,7 +45,7 @@ Total telson fasta files in the working dir now:
         Tserrulatus_withid_withid_centroids.fasta
         
 ## Step 3. To only process one sample:
-###Use the correct script, according to fasta type. For amino acid ones, use BLASTI_tblastn_Scorpiones_db.sh
+### Use the correct script, according to fasta type. For amino acid ones, use BLASTI_tblastn_Scorpiones_db.sh
 For example: 
 
     bash BLASTI_tblastn_Scorpiones_db.sh T_serru_aa_dl.fasta
@@ -58,18 +58,28 @@ This file will have 13 columns that correspond with the following:
     qseqid sseqid pident length evalue mismatch gapopen qstart qend sstart send qlen slen
 
 ## Step 4. Python script to retrieve the sequences for one
-### You will need to first download the getSeq.py script from this git. 
+### You will need to first download the getSeq.py script from this git: 
 
     wget https://raw.githubusercontent.com/amc19008/Venom_Gene_Annotation/refs/heads/main/Scripts/getSeq.py 
 
-Next, you will identify the qseqid and sseqid 
+Next, you need the BLASTII_py_for_one.sh script from this git:
 
-### You also need to create a list.txt file that contains the names of the samples you intend to use:
+    wget
+You also need to create a list.txt file that contains the names of the samples you intend to use:
 
-    C_stock_nt_dl
-    C_stock_telson_ORP_centroids
     T_serru_aa_dl
-    T_serru_nt_dl
-    Tserrulatus_withid_withid_centroids
 
-We can call this list.txt
+Next you need a Column2.txt file that contains the contents of column 2 from your out file:
+
+    awk '{print $2}' T_serru_aa_dl.fasta.tblastn.Scorpiones_db.out > Column2.txt
+
+The resulting file contents will contain the sseqids which look like this:
+
+    Scorpiones_Toxin_141_NDBS
+    Scorpiones_Toxin_142_NDBS
+    Scorpiones_Toxin_156_VMPA
+    Scorpiones_Toxin_156_VMPA
+    Scorpiones_Toxin_157_HYAL
+    Scorpiones_Toxin_727_HYAL
+    ...
+Now you have the three parts you need to run the 
