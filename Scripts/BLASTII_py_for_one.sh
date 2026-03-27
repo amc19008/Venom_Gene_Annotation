@@ -2,8 +2,8 @@
 
 while read line
 	do
-        file="/Users/ashercoello/venom_pull/single_example/$line_Column2.txt" #This is now the list of files
-        Fasta="/Users/ashercoello/venom_pull/single_example/$line.fasta"
+        file="/path/to/Column1file/${line}_Column1.txt" #This is now the list of files
+        Fasta="/path/to/fastafile/${line}.fasta"
 #Step 2: Make a list of battle types to be analyzed
 #Reads the input file one line at a time
 #pulls colony type (e.g., AB), by cutting (cut) at commas (-d ,) and keeping the first field (-f1)
@@ -11,7 +11,7 @@ while read line
 #directs output to a new file: temp3-$colonies-$castes.txt (note that this will overwrite any previous file by that name)
 while read line
 	do
-		SeqID=$(echo "$line" | cut -d , -f1)
+		SeqID=$(echo "$line" | cut -d . -f1)
 		geneName="temp"
         python getSeq.py $Fasta $SeqID $geneName  
 		
