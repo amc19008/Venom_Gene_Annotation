@@ -26,13 +26,13 @@ You can import your own assembled transcriptomes to the working directory, or br
     https://www.ncbi.nlm.nih.gov/Traces/wgs/?page=1&view=tsa 
 
 For this example we will use a combination of the two types (diy and ncbi) for two scorpion species (Chaerilus stockmannorum and Tityus serrulatus), in both nucleotide and amino acid formats. 
-        (You can also import all of these from the '/fastas' folder on this git to follow along using wget and the raw URL:
+        (You can also import one or all of these from the '/fastas' folder on this git to follow along using wget and the raw URL:
         
                 wget https://raw.githubusercontent.com/amc19008/Venom_Gene_Annotation/refs/heads/main/Fastas/T_serru_aa_dl.fasta])
 
-NCBI downloads renamed:
+Three of these are NCBI downloads, renamed:
 
-    mv GKVP01.1.fsa_nt C_stock_nt_dl.fasta
+    mv GKVP01.1.fsa_nt C_stock_nt_dl.fasta.gz
     mv GEUW01.1.fsa_aa T_serru_aa_dl.fasta
     mv GEUW01.1.fsa_nt T_serru_nt_dl.fasta 
 Total telson fasta files in the working dir now:
@@ -56,6 +56,8 @@ The file that results will be renamed according to the file sample name and type
 This file will have 13 columns that correspond with the following:
 
     qseqid sseqid pident length evalue mismatch gapopen qstart qend sstart send qlen slen
+
+## Step 3b. BLASTing several fasta samples:
 
 ## Step 4. Python script to retrieve the sequences for one
 ### You will need to first download the getSeq.py script from this git: 
