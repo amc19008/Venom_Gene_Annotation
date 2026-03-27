@@ -37,7 +37,7 @@ Three of these are NCBI downloads, renamed:
     mv GKVP01.1.fsa_nt C_stock_nt_dl.fasta.gz
     mv GEUW01.1.fsa_aa T_serru_aa_dl.fasta
     mv GEUW01.1.fsa_nt T_serru_nt_dl.fasta 
-Total telson fasta files in the working dir now:
+Total telson fasta files in the working dir now (if you downloaded all. You can choose a single one, or multiple):
 
         C_stock_nt_dl.fasta
         C_stock_telson_ORP_centroids.fasta
