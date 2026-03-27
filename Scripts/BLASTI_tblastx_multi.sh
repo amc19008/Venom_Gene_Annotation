@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#For use with multiple nuclotide fastas 
 # Directory containing the FASTA files
 FASTA_DIR="/Path/to/nt_multi"
 
