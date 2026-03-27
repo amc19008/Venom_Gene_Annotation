@@ -51,3 +51,19 @@ The file that results will be renamed according to the file sample name and type
 This file will have 13 columns that correspond with the following:
 
     qseqid sseqid pident length evalue mismatch gapopen qstart qend sstart send qlen slen
+
+## Step 4. Python script to retrieve the sequences
+### You will need to first download the getSeq.py script from this git. 
+
+    Example
+
+### You also need to create a list.txt file that contains the names of the samples you intend to use:
+
+    C_stock_nt_dl
+    C_stock_telson_ORP_centroids
+    Scorpiones_db
+    T_serru_aa_dl
+    T_serru_nt_dl
+    Tserrulatus_withid_withid_centroids
+
+We can call this list.txt
