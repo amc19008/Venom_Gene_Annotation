@@ -88,10 +88,10 @@ Edit the lines in the BLASTI_tblastx_multi script leading to the directory your 
 And finally, BLAST:
 
     bash BLASTI_tblastx_multi.sh
-This will result in 2 output files in this case, ending with "-tblastn.Scorpiones_db.out":
+This will result in 2 output files in this case, ending with "-tblastx.Scorpiones_db.out":
 
-    C_stock_nt_dl-tblastn.Scorpiones_db.out
-    T_serru_nt_dl-tblastn.Scorpiones_db.out
+    C_stock_nt_dl-tblastx.Scorpiones_db.out
+    T_serru_nt_dl-tblastx.Scorpiones_db.out
 
 ## Step 4. Python script to retrieve the sequences for one
 ### You will need to first download the getSeq.py script from this git: 
