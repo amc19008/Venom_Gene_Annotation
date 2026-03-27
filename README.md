@@ -127,7 +127,7 @@ You can check it installed properly by checking for the version:
 To run the script, ensure that the proper paths to your Column1 and fasta file are substituted in the BLASTII_py_for_one.sh:
 
     ...
-    file="/path/to/Column2file/${line}_Column1.txt" #This is now the list of files
+    file="/path/to/Column1file/${line}_Column1.txt" #This is now the list of files
     Fasta="/path/to/fastafile/T_serru_aa_dl.fasta"
     ...
 And simply bash:
@@ -144,3 +144,28 @@ The output file will be called Toxin_output.fasta and look like this:
     IPGHEKYVHYSKLTRNLGDYYCKKNEGLAKDADIIMLTTDRSLADISREGKLIADVAGGA
     ....
 
+## Step 4b. Python script to retrieve the sequences for many fastas
+### Working again with the data and directory (nt_multi) from 3b, we can apply similar steps as if we were running one fasta. 
+First, download the BLASTII_py_for_all.sh 
+
+    wget 
+Ensure the getSeq.py file is also present in this directory:
+
+    cp ../getSeq.py .
+Next, use the awk command to create a Column1 file for each fasta
+
+    awk '{print $1}' C_stock_nt_dl-tblastx.Scorpiones_db.out > C_stock_nt_dl_Column1.txt
+    awk '{print $1}' T_serru_nt_dl-tblastx.Scorpiones_db.out > T_serru_nt_dl_Column1.txt
+And create a new_list.txt with your sample names (without .fasta):
+
+    C_stock_nt_dl
+    T_serru_nt_dl
+To run the script, ensure that the proper paths to your Column1 and fasta file are substituted in the BLASTII_py_for_all.sh:
+
+    ...
+    file="/path/to/nt_multi/${line}_Column1.txt" #This is now the list of files
+    Fasta="/path/to/nt_multi/${line}.fasta"
+Finally, bash the BLASTII_py_for_all script
+
+    bash BLASTII_py_for_all.sh 
+The resulting file will be called Multi_Toxin_output.fasta
