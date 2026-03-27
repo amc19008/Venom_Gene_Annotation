@@ -63,7 +63,7 @@ This file will have 13 columns that correspond with the following:
     gunzip C_stock_nt_dl.fasta.gz
 Then, you can download the BLASTI_tblastx_multi script. Remember: Edit according to what data types you want to run 
 
-    wget 
+    wget https://raw.githubusercontent.com/amc19008/Venom_Gene_Annotation/refs/heads/main/Scripts/BLASTI_tblastx_multi.sh
 Next we can try this using nucleotide fastas in a new directory, copying over relevant files:
 
     mkdir nt_multi
