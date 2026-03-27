@@ -73,11 +73,11 @@ Next we can try this using nucleotide fastas in a new directory, copying over re
         mv T_serru_nt_dl.fasta nt_multi
 *
 
-        cp BLASTI_tblastn_array.sh nt_multi
+        cp BLASTI_tblastx_array.sh nt_multi
 *
 
         cd nt_multi
-Edit the lines in the BLASTItblastn_array script leading to the directory your fastas and databases are in:
+Edit the lines in the BLASTItblastx_array script leading to the directory your fastas and databases are in:
 
     ...
     # Directory containing the FASTA files
@@ -87,7 +87,11 @@ Edit the lines in the BLASTItblastn_array script leading to the directory your f
     tblastn -db /path/to/Scorpiones_db -evalue 1e-20 \
 And finally, BLAST:
 
-    bash BLASTI_tblastn_array.sh
+    bash BLASTI_tblastx_array.sh
+This will result in 2 output files in this case, ending with "-tblastn.Scorpiones_db.out":
+
+    C_stock_nt_dl-tblastn.Scorpiones_db.out
+    T_serru_nt_dl-tblastn.Scorpiones_db.out
 
 ## Step 4. Python script to retrieve the sequences for one
 ### You will need to first download the getSeq.py script from this git: 
