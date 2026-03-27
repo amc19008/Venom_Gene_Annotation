@@ -169,3 +169,9 @@ Finally, bash the BLASTII_py_for_all script
 
     bash BLASTII_py_for_all.sh 
 The resulting file will be called Multi_Toxin_output.fasta
+
+## Remember:
+### What BLAST you use depends on the fasta file you are using and the database, as well. Simply copy and edit the blast command in the BLASTI scripts to reflect which combinations are occuring. 
+In the above tutorial, the ToxCodAn-Genome Scopriones_db uses a nucleotide fasta. If the venom gland fasta files are amino acids use blastx, if they are nucleotides, use tblastx. 
+### Alternately,
+If you are using another kind of database that uses amino acids, you can use blastp with amino acid venom gland fastas, and tblastn with nucleotide ones. 
