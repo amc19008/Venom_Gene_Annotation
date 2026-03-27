@@ -12,7 +12,7 @@ These take only one argument:
 or
         sbatch BLASTI_tblastn_Scorpiones_db_array.sh
 or
-        sbatch BLASTI_blastn_Scorpiones_db.sh
+        sbatch BLASTI_tblastx_Scorpiones_db.sh
                 (If you are using a nucleotide fasta)
 The submit files will result in a blast output file in a tab delimited format with no headers. Columns are as follows,
 for parsing:
