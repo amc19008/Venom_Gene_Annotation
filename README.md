@@ -64,7 +64,7 @@ This file will have 13 columns that correspond with the following:
 
 Next, you need the BLASTII_py_for_one.sh script from this git:
 
-    wget
+    wget https://raw.githubusercontent.com/amc19008/Venom_Gene_Annotation/refs/heads/main/Scripts/BLASTII_py_for_one.sh
 You also need to create a list.txt file that contains the names of the samples you intend to use:
 
     T_serru_aa_dl
