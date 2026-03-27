@@ -69,9 +69,9 @@ You also need to create a list.txt file that contains the names of the samples y
 
     T_serru_aa_dl
 
-Next you need a Column2.txt file that contains the contents of column 2 from your out file:
+Next you need a Column1.txt file that contains the contents of column 1 from your out file:
 
-    awk '{print $2}' T_serru_aa_dl.fasta.tblastn.Scorpiones_db.out > T_serru_aa_dl_Column2.txt
+    awk '{print $1}' T_serru_aa_dl.fasta.tblastn.Scorpiones_db.out > T_serru_aa_dl_Column1.txt
 
 Ensure you rename with the same naming format as the sample files. The resulting file contents will contain the sseqids which look like this:
 
@@ -82,4 +82,16 @@ Ensure you rename with the same naming format as the sample files. The resulting
     Scorpiones_Toxin_157_HYAL
     Scorpiones_Toxin_727_HYAL
     ...
-Now you have the three parts you need to run the 
+Now you have the three parts you need to run the BLASTII_py_for_one.sh script. If you don't have biopython, you can download it before running:
+
+    pip install biopython
+You can check it installed properly by checking for the version:
+
+        python -c "import Bio; print(Bio.__version__)"
+To run the script, ensure that the proper paths to your Column1 and fasta file are substituted in the BLASTII_py_for_one.sh:
+
+    file="/path/to/Column2file/${line}_Column1.txt" #This is now the list of files
+    Fasta="/path/to/fastafile/${line}.fasta"
+And simply bash:
+
+    bash BLASTII_py_for_one.sh
