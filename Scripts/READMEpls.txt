@@ -1,3 +1,5 @@
+#This README is old, and imported from the original directory I used to create this venom annotation workflow
+
 This directory contains blast database for Scorpiones:
 -- Scorpiones_db -- toxin gene set from ToxCodAn, about 2,244 transcripts
 
