@@ -44,7 +44,7 @@ Total telson fasta files in the working dir now:
         T_serru_nt_dl.fasta
         Tserrulatus_withid_withid_centroids.fasta
         
-## Step 3. To only process one sample:
+## Step 3. BLASTing one fasta sample:
 ### Use the correct script, according to fasta type. For amino acid ones, use BLASTI_tblastn_Scorpiones_db.sh
 For example: 
 
