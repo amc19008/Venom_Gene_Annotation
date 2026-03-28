@@ -1,0 +1,38 @@
+### This is a work in progress, but I am using a test set of spider transcriptomes
+
+mkdir Spider_venom_pull
+cd Spider_venom_pull 
+wget https://www.arachnoserver.org/fasta/all.pep.fa
+wget https://www.arachnoserver.org/fasta/all.dna.fa
+
+grep -c ">" all.dna.fa
+    1013 #this is how many nt seq there are
+grep -c ">" all.pep.fa
+    1838 #how many aa seq there are
+
+conda activate blast
+
+makeblastdb -in all.pep.fa -input_type fasta -dbtype prot -out ArachnoServer_pep_db
+    #made 8
+makeblastdb -in all.dna.fa -input_type fasta -dbtype nucl -out ArachnoServer_dna_db
+    #made 8
+
+pwd
+    /Users/ashercoello/Spider_venom_pull
+
+#Downloaded the following spiders from NCBI:
+    Species	Tissue	Bioproject	Prefix	Misc
+    Latrodectus_tredecimguttatus	venom gland	PRJNA215735	GANL01
+    Trittame_loki	venom gland	PRJNA189679	GAQE01	targeted TSA
+    Acanthoscurria_juruenicola	venom gland	PRJNA603608	GIIZ01	captivity
+    Acanthoscurria_rondoniae	venom gland	PRJNA633430	GIOJ01	captivity
+    Stegodyphus_mimosarum	whole body	PRJNA222763	GAZR01
+
+#Renamed them to be more informative:
+mv GANL01.1.fsa_nt L_trede_nt.fasta #and so on and so forth
+
+ls ./*.fasta
+    ./A_jurue_nt.fasta	./L_trede_nt.fasta	./T_loki_aa.fasta
+    ./A_rondo_nt.fasta	./S_mimos_nt.fasta	./T_loki_nt.fasta
+
+#most of these are nt, with the exception of one aa, so we should do that one first.
