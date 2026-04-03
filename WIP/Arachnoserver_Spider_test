@@ -79,4 +79,4 @@ wget https://raw.githubusercontent.com/amc19008/Venom_Gene_Annotation/refs/heads
 #I edit the paths in the BLASTII script to current working dir and then make a list.txt and Column1.txt file
 #list.txt contains: T_loki_aa
 #To make Column1.txt:
-
+awk '{print $1}' T_loki_aa.fasta.blastp.ArachnoServer_pep_db.out > T_loki_aa_Column1.txt
