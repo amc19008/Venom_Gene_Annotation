@@ -72,3 +72,6 @@ head T_loki_aa.fasta.blastp.ArachnoServer_pep_db.out
             JAB84546.1	as:U11-barytoxin-Tl1b|sp:W4VS49|2041	100.000	98	1.57e-798	1	98	98	98
             JAB84545.1	as:U12-barytoxin-Tl1a|sp:W4VRV3|1698	100.000	124	8.74e-9124	1	124	124	124
             JAB84544.1	as:U13-barytoxin-Tl1a|sp:W4VRY7|1566	100.000	120	5.01e-8120	1	120	120	120
+#Next let's do part two:
+
+wget 
