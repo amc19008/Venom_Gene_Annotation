@@ -74,4 +74,9 @@ head T_loki_aa.fasta.blastp.ArachnoServer_pep_db.out
             JAB84544.1	as:U13-barytoxin-Tl1a|sp:W4VRY7|1566	100.000	120	5.01e-8120	1	120	120	120
 #Next let's do part two:
 
-wget 
+wget https://raw.githubusercontent.com/amc19008/Venom_Gene_Annotation/refs/heads/main/Scripts/getSeq.py
+wget https://raw.githubusercontent.com/amc19008/Venom_Gene_Annotation/refs/heads/main/Scripts/BLASTII_py_for_one.sh
+#I edit the paths in the BLASTII script to current working dir and then make a list.txt and Column1.txt file
+#list.txt contains: T_loki_aa
+#To make Column1.txt:
+
