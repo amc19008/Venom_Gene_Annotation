@@ -1,6 +1,8 @@
 # Venom_Gene_Annotation
 This workflow for venom gene annotation uses venome gland (in this case telson) transcriptomes, a venom database (ToxCodAn_Genome), and BLAST for venom gene annotation. Original Python script (getSeq.py) credit goes to Dr Abbey Hayes. 
 
+## NOTE: THIS IS A TUTORIAL FOR SCORPION, BUT THE STEPS CAN BE TAKEN FOR SPIDER AND THE SPIDER-SPECIFIC TESTING IS IN THE "WIP" FOLDER ON THIS GIT. THERE IS AN EXAMPLE FOR RUNNING WITH SPIDER
+
 # Tutorial using scorpions and ToxCodAn DB
 ## Before begining ensure you have conda and blast installed:
 To download it, if you don'tt have it:
